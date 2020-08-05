@@ -7,7 +7,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  static const ROUTE_CATEGORY_MEALS = '/category-meals';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       home: CategoriesScreen(),
       routes: {
-        ROUTE_CATEGORY_MEALS: (ctx) => CategoryMealsScreen(),
+        CategoryMealsScreen.ROUTE: (ctx) => CategoryMealsScreen(),
       },
     );
   }
