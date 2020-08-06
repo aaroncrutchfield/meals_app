@@ -37,6 +37,12 @@ class MealDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('${selectedMeal.title}'),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.delete),
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -72,7 +78,7 @@ class MealDetailsScreen extends StatelessWidget {
                     ),
                     title: Text(selectedMeal.steps[index]),
                   ),
-	                Divider()
+                  Divider()
                 ],
               ),
             ))
